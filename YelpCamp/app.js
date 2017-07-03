@@ -18,10 +18,9 @@ var campgroundRoutes = require("./routes/campgrounds"),
 
 //export DATABASEURL=mongodb....  local 
 //set to production on mLab ONLY by adding a config variable in settings (heroku)
-mongoose.connect(process.env.DATABASEURL);
+var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp"
+mongoose.connect(url);
 
-// mongoose.connect("mongodb://localhost/yelp_camp")
-//mongoose.connect("mongodb://aenderw:snl7504@ds147902.mlab.com:47902/yelpcamp_arh");
 app.use(bodyParser.urlencoded({extended:true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
