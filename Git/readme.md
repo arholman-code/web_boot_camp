@@ -7,6 +7,11 @@
 * Installing Git (not really)
 
 #Git Basics
-* init/add/commit
+* init/add/commit/status
+* "git add ." - Adds all files to commit
 
 #Git Checkout
+* log/checkout
+* hit 'Q' to leave the log 
+* git revert --no-commit 0766c053..HEAD
+*   reverts back to a former commit
